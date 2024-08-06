@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
  
 :root{
-    --red:#a105af;
+    --red:#3635a8;
 }
 
 *{
@@ -61,7 +61,7 @@ section{
 
 .btn{
     display: inline-block;
-    margin: 1rem auto auto 25rem;
+    margin: 1rem auto auto 37%;
     padding: .7rem 3rem;
     border-radius: 5rem;
     background: var(--red);
@@ -72,7 +72,7 @@ section{
 
 .btn-sec{
     display: inline-block;
-    margin: 1rem auto auto 3rem;
+    margin: 1rem auto auto 37%;
     padding: .7rem 3rem;
     border-radius: 5rem;
     background: var(--red);
@@ -134,8 +134,6 @@ header{
     background-size: cover;
     z-index: 10000;
     padding: 1rem 5%;
-    /* padding-bottom: 4rem; */
-    /* height: 10vh; */
 }
 
 header.sticky{
@@ -148,13 +146,11 @@ header.sticky{
 header .logo {
     display: flex;
     align-items: center;
-    /* margin: 0 0 0 10px; */
 }
 
 header a img{
     width: 4em;
     height: 2.5em;
-    /* padding: 0 1.2em -3em; */
     font-size: 2.5rem;
     border-radius: 100%;
     object-fit: fill;
@@ -162,8 +158,6 @@ header a img{
 }
 
 header .navbar{
-    /* margin-left: 18em; */
-    /* float: right; */
     justify-content:end;
 }
 
@@ -210,8 +204,11 @@ header a h3{
 
 .home .content h1{
     text-align: center;
+    font-style: italic;
+    font-family: cursive;
+    text-transform: uppercase;
     font-size: 5rem;
-    color: var(--red);
+    color: antiquewhite;
     text-align: center;
 }
 
@@ -219,7 +216,7 @@ header a h3{
     text-transform: uppercase;
     font-size: 1.5em;
     font-weight: 600;
-    background: linear-gradient(to top, transparent 0%, #55c047 40%);
+    background: linear-gradient(to left, transparent 0%, red, yellow, green, blue, purple);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
@@ -228,7 +225,8 @@ header a h3{
 
 .home .content h3{
     font-size: 3rem;
-    color: #ffffff;
+    background: linear-gradient(to right, yellow, rgba(94, 255, 125, 0));
+    color:#ffffff;
     text-align: center;
 }
 
@@ -247,6 +245,10 @@ header a h3{
     flex-wrap: wrap;
 }
 
+.features h3{
+    color:#3635a8;
+}
+
 .features .box-container .box{
     line-height:normal;
     flex: 1 1 27rem;
@@ -256,7 +258,6 @@ header a h3{
     max-height: 100%;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
     border: .1rem solid rgba(0, 0, 0, .3);
-    /* border-radius: 1rem; */
     text-align: center;
     background: url(./images/card-bg3.png) no-repeat;
     background-size: cover;
@@ -279,7 +280,7 @@ header a h3{
 
 .features .box-container .box h3{
     font-size: 2.5rem;
-    color: #333;
+    color: #3635a8;
 }
 
 .features .box-container .box span{
@@ -289,7 +290,6 @@ header a h3{
 
 .featuers .box-container .box p{
     font-size: 2rem;
-    /* padding-bottom: 2rem; */
 }
 
 .features .box-container .box .share{
@@ -362,6 +362,7 @@ header a h3{
 .portfolio .container .content{
     width: 100%;
 }
+
 .portfolio-list{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -369,6 +370,7 @@ header a h3{
     gap: 35px;
     margin: 0 auto;
 }
+
 .portfolio-list .img-card{
     position: relative;
     max-width: 100%;
@@ -562,13 +564,16 @@ header a h3{
     background-size: cover;
     background-position: center;
     overflow-y: hidden;
+    transition: all 1s ease-in-out;
+    cursor: pointer;
 }
 
 .teacher .box-container .box:hover{
     transform: scale(1.015);
-    overflow-y: auto;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(103, 255, 103, 0.829) #3635a8;
     scroll-behavior: smooth;
-    scrollbar-width: 10rem;
 }
 
 .teacher .box-container .box img{
@@ -641,11 +646,16 @@ header a h3{
     text-align: center;
     background-color: rgba(189, 183, 107, 0.4);
     overflow-y: hidden;
+    transition: all 1s ease-in-out;
+    cursor: pointer;
 }
 
 .testimonials .box-container .box:hover{
     transform: scale(1.015);
-    overflow-y: auto;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(103, 255, 103, 0.829) #3635a8;
+    scroll-behavior: smooth;
 }
 
 .testimonials .box-container .box .row{
@@ -768,6 +778,7 @@ iframe{
     width: 40vw;
     height: 80vh;
     margin-left: 6em;
+    border: 2px solid black;
 }
 
 /* FOOTER */
